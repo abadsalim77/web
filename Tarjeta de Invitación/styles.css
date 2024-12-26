@@ -1,0 +1,533 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Gladiota:wght@400&display=swap');
+
+@font-face {
+    font-family: 'Gladiota';
+    src: url('./gladiola-regular-regular-maisfontes.2166/gladiola-regular-regular.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background: rgb(6, 29, 82);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre los elementos */
+    font-size: 2em;
+    color: #fff; /* Cambiar el color del texto a blanco */
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out; /* Añadir animación de entrada */
+    text-align: center; /* Centrar el texto */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor visibilidad */
+    padding: 10px; /* Añadir padding */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+#countdown-ceremonia {
+    display: flex;
+    justify-content: flex-end; /* Alinear a la derecha */
+    align-items: center;
+    gap: 10px; /* Espacio entre los elementos */
+    font-size: 3em;
+    color: #fff; /* Cambiar el color del texto a blanco */
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out; /* Añadir animación de entrada */
+    text-align: center; /* Centrar el texto */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor visibilidad */
+    padding: 10px; /* Añadir padding */
+    border-radius: 5px; /* Bordes redondeados */
+    background-image: url('./img/pexels-pavel-danilyuk-7944238.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken; /* Mezclar la imagen de fondo con el color de fondo */
+}
+
+#countdown-fiesta {
+    display: flex;
+    justify-content: flex-end; /* Alinear a la derecha */
+    align-items: center;
+    gap: 10px; /* Espacio entre los elementos */
+    font-size: 3em;
+    color: #fff; /* Cambiar el color del texto a blanco */
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out; /* Añadir animación de entrada */
+    text-align: center; /* Centrar el texto */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor visibilidad */
+    padding: 10px; /* Añadir padding */
+    border-radius: 5px; /* Bordes redondeados */
+    background-image: url('./img/pexels-cottonbro-3171837.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken; /* Mezclar la imagen de fondo con el color de fondo */
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-number {
+    font-size: 3em;
+}
+
+.countdown-label {
+    font-size: 0.5em;
+    margin-top: 5px;
+}
+
+.countdown-separator {
+    font-size: 2em;
+    color: #fff;
+    align-self: center; /* Centrar los puntos separadores verticalmente */
+}
+
+/* Definir la animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    display: flex; /* Habilita flexbox */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    justify-content: space-between; /* Espacia los elementos para que el logo esté en la parte superior y el h1 en la parte inferior */
+    position: relative; /* Posicionar el header relativo para superponer el gradiente */
+    background-image: url('./img/fondo.jpg'); /* Solo la imagen de fondo */
+    background-size: cover;
+    background-position: 35% center;
+    color: #fff;
+    padding: 40px 0; /* Espaciado vertical */
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+    height: 1400px; /* Altura fija para el encabezado */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(233, 235, 241, 0.8), rgba(6, 29, 82, 0.6), rgba(6, 29, 82, 0.4), rgb(6, 29, 82)); /* Gradiente por encima de la imagen */
+    z-index: 1; /* Asegurar que el gradiente esté por encima de la imagen */
+}
+
+header * {
+    position: relative;
+    z-index: 2; /* Asegurar que el contenido esté por encima del gradiente */
+}
+
+h1, h2 {
+    color: #fff; /* Color del texto en blanco */
+    padding: 0px; /* Espaciado interno para el texto */
+    text-align: center; /* Centra el texto */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+}
+
+h1 {
+    font-family: 'Gladiota', sans-serif; /* Cambiar a Gladiota Regular */
+    font-weight: 400; /* Ajusta el peso de la fuente */
+    font-style: normal;
+    text-decoration: none;
+    font-size: 8em;
+    margin: 100px 0 20px;
+}
+
+
+h2 {
+    font-size: 2.3em; /* Tamaño de la fuente para h2 */
+    margin: 10px 0 0; /* Espaciado superior para h2 */
+    letter-spacing: 0.5em; /* Espaciado entre letras para h2 */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: 300;
+}
+
+header h1 , header h2{
+    animation: fadeIn 2s ease-out;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background: rgb(6, 29, 82);
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+    box-shadow: 0 4px 6px rgb(6, 29, 82);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgb(6, 29, 82);
+}
+
+#ceremonia {
+    animation-delay: 0.5s;
+}
+
+#fiesta {
+    animation-delay: 1s;
+}
+
+.logo {
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: 300px; /* Mantén la altura igual a la anchura para un círculo perfecto */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
+    border: 2px solid #fff; /* Opcional: agrega un borde blanco alrededor del logo */
+}
+
+.logo-container {
+    display: flex; /* Habilita flexbox para el logo */
+    justify-content: center; /* Centra el logo horizontalmente */
+    margin-bottom: auto; /* Asegura que el logo esté en la parte superior */
+}
+
+.title-container {
+    margin-top: 60px; /* Espaciado superior para bajar los títulos */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgb(6, 29, 82);
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+} */
+
+#align {
+    text-align: center;
+    color:#fff
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1.neon {
+    font-size: 11em; /* Reducir el tamaño de la fuente */
+    color: #fff; /* Color blanco */
+    text-shadow: 
+        0 0 1px rgb(56, 182, 255), /* Sombra sutil */
+        0 0 2px rgb(56, 182, 255), /* Sombra más pronunciada */
+        0 0 5px rgb(56, 182, 255), /* Sombra más intensa */
+        0 0 7px rgb(56, 182, 255), /* Sombra aún más intensa */
+        0 0 75px rgb(56, 182, 255), /* Sombra dorada con opacidad */
+        0 0 100px rgb(56, 182, 255); /* Sombra dorada más difusa */
+    text-decoration: underline; /* Agregar subrayado */
+    text-decoration-color: rgba(255, 215, 0, 0.5); /* Color dorado con opacidad para un efecto sutil */
+    text-decoration-thickness: 1px; /* Grosor del subrayado */
+    margin: 0;
+}
+
+.gif {
+    width: 100px; /* Ajusta el tamaño del GIF según sea necesario */
+    height: auto; /* Mantiene la proporción del GIF */
+    margin: 0 20px; /* Espaciado horizontal entre el GIF y el texto */
+    animation: fadeIn 1s ease-out forwards; /* Añade la animación */
+    animation-delay: 0.5s; /* Retraso para que aparezca después del h1 */
+}
+
+.flotante1{
+    position: absolute; /* Permite que el GIF flote */
+    top: -450px; /* Ajusta la posición vertical */
+    left: -80px; /* Ajusta la posición horizontal */
+    width: 470px;
+    animation: float 5s ease-in-out infinite; /* Animación de flotación */
+}
+
+.flotante2{
+    position: absolute; /* Permite que el GIF flote */
+    top: -435px; /* Ajusta la posición vertical */
+    left: 960px; /* Ajusta la posición horizontal */
+    width: 450px;
+    
+    animation: float 5s ease-in-out infinite; /* Animación de flotación */
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Movimiento hacia arriba */
+    100% { transform: translateY(0); }
+}
+
+.promocion-bg {
+    background-image: url('./img/name_promotion.png'); /* Ruta a la imagen de fondo */
+    background-size: contain; /* Ajustar la imagen para que se contenga dentro de la sección */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-position: center;
+    padding: 20px;
+    border-radius: 5px;
+    color: white; /* Color del texto */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    height: auto; /* Ajustar la altura automáticamente */
+}
+
+.promocion-title {
+    margin-top: 20px; /* Espaciado superior */
+    font-family: 'Dancing Script', cursive; /* Cambia el tipo de letra a un estilo de firma */
+    font-size: 3em; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+.promocion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegura que el contenido llene toda la sección */
+}
+
+.promocion-text {
+    font-family: 'Impact', sans-serif; /* Cambia el tipo de letra a Impact */
+    font-size: 6em; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #d3ba2d; /* Color dorado */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Mueve el texto un poco más arriba */
+    letter-spacing: 0.1em; /* Espaciado entre letras */
+}
+
+.invitacion-bg {
+    background-image: url('./img/panel_invitacion.png'); /* Ruta a la imagen de fondo */
+    background-size: contain; /* Ajustar la imagen para que cubra toda la sección */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-position: center;
+    padding: 40px;
+    border-radius: 5px;
+    color: white; /* Color del texto */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    min-height: 200vh; /* Altura mínima de la sección */
+    width: 100%; /* Hacer la sección más ancha */
+    margin: 0 auto; /* Centrar la sección horizontalmente */
+}
+
+.birrete-img {
+    width: 250px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 100px; /* Espaciado entre la imagen y el texto */
+}
+
+.invitacion-title {
+    font-family: 'Style Script', cursive; /* Cambia el tipo de letra a Style Script Pro */
+    font-size: 6em; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #FFFF; /* Color dorado */
+    align-items: center;
+    letter-spacing: 0;
+    text-transform: none; /* Permite mayúsculas y minúsculas */
+    text-shadow: 
+        0 0 5px #ffd700, 
+        0 0 10px #ffd700, 
+        0 0 20px #ffd700, 
+        0 0 30px #ffd700, 
+        0 0 40px #ffd700, 
+        0 0 50px #ffd700, 
+        0 0 60px #ffd700; /* Efecto de neón dorado */
+}
+
+.invitacion-text {
+    font-family: Arial, sans-serif; /* Tipo de letra para el texto */
+    font-size: 1.8em; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #2e2d2d; /* Color del texto */
+    max-width: 800px; /* Ancho máximo del texto */
+    margin: 0 auto; /* Centra el texto horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: 300; /* Hacer la letra más delgada */
+}
+
+.invitacion-text-bold {
+    font-family: Arial, sans-serif; /* Tipo de letra para el texto */
+    font-size: 1.8em; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #2e2d2d; /* Color del texto */
+    max-width: 800px; /* Ancho máximo del texto */
+    margin: 0 auto; /* Centra el texto horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: 900; /* Hacer la letra más negrita */
+}
+
+.ceremonia-fiesta-text {
+    font-family: 'Style Script', cursive; /* Cambia el tipo de letra a Style Script Pro */
+    font-size: 3.5em; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #ffd700; /* Color dorado */
+    align-items: center;
+    letter-spacing: 0;
+    text-transform: none; /* Permite mayúsculas y minúsculas */
+    margin: 0; /* Eliminar el espacio superior e inferior */
+}
+
+.ubicacion-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+.ubicacion-img {
+    width: 70px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 5px; /* Espaciado entre la imagen y el texto */
+}
+
+.personas-container {
+    display: flex;
+    justify-content: space-around; /* Distribuir los elementos horizontalmente */
+    align-items: center; /* Centrar los elementos verticalmente */
+    margin-top: 20px; /* Espaciado superior */
+    gap: 20px; /* Añadir espacio entre los elementos */
+}
+
+.persona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.persona-icon {
+    width: 70px; /* Ajusta el tamaño del icono según sea necesario */
+    height: auto; /* Mantiene la proporción del icono */
+    margin-bottom: 10px; /* Espaciado entre el icono y el texto */
+}
+
+.persona-text {
+    font-family: Arial, sans-serif; /* Tipo de letra para el texto */
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #000000; /* Color del texto */
+}
+
+.imagen-inferior {
+    margin-top: 0px; /* Aumentar el espaciado superior */
+    text-align: center; /* Centrar la imagen horizontalmente */
+}
+
+.imagen-inferior-img {
+    width: 40%; /* Ajustar el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+.amenizan-bg {
+    background: rgb(6, 29, 82); /* Fondo de la sección */
+    background-size: cover; /* Ajustar la imagen para que cubra toda la sección */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-position: center;
+    padding: 40px;
+    border-radius: 5px;
+    color: white; /* Color del texto */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.brillo-img {
+    position: absolute; /* Posicionar el brillo detrás de la imagen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegurar que el brillo esté detrás de la imagen */
+}
+
+.amenizan-title {
+    font-family: 'Impact', cursive; /* Cambia el tipo de letra a un estilo de firma */
+    font-size: 3em; /* Ajusta el tamaño de la fuente según sea necesario */
+    margin-bottom: 20px; /* Espaciado inferior */
+    color: #fff; /* Color blanco */
+    text-shadow: 
+        0 0 2px #ffd700, /* Sombra sutil */
+        0 0 4px #ffd700, /* Sombra más pronunciada */
+        0 0 6px #ffd700, /* Sombra más intensa */
+        0 0 8px #ffd700, /* Sombra aún más intensa */
+        0 0 10px #ffd700; /* Sombra extra */
+}
+
+.amenizan-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amenizan-img {
+    position: relative; /* Asegurar que la imagen esté encima del brillo */
+    width: 700px; /* Ajustar el tamaño de la imagen para que sea más grande */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados */
+    background: none; /* Eliminar el fondo blanco */
+}
